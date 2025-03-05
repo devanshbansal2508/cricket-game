@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cricket game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #equipment{
+        height: 100px;
+        width: 100px;
+        
+      }
+      button{
+        margin: 10px;
+        background-color: aliceblue;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BAT BALL STUMP GAME</h1>
+    <button
+    
+      onclick="
+    let userchoise = 'BAT';
+    let computerchoice;
+    let randomnumber = Math.random()*3;
+  if(randomnumber<=1 ){
+    computerchoice='BAT';
+  }
+  else if( randomnumber<=2){
+    computerchoice='BALL';
+  }
+  else{
+    computerchoice='STUMP';
+  }
+  let gameresult;
+  if(computerchoice == 'BAT'){
+    gameresult=' THE GAME WAS TIE';
+
+  }
+  else if(computerchoice == 'BALL'){
+    gameresult='USER WON THE GAME';
+
+  }
+  else{
+    gameresult='COMPUTER WON THE GAME';
+  }
+  document.querySelector('#result').innerText=`USER CHOICE IS ${userchoise}\n COMPUTER CHOICE IS ${computerchoice} \n RESULT : ${gameresult}`
+  "
+    >
+      <img id="equipment" src="BAT.jpg" alt="">
+    </button>
+    <button
+    id="equipment"
+      onclick="
+    userchoise = 'BALL';
+    randomnumber = Math.random()*3;
+  if( randomnumber<=1 ){
+    computerchoice='BAT';
+  }
+  else if( randomnumber<=2){
+    computerchoice='BALL';
+  }
+  else{
+    computerchoice='STUMP';
+  }
+  
+  if(computerchoice == 'BAT'){
+    gameresult='USER WON THE GAME';
+
+  }
+  else if(computerchoice == 'BALL'){
+    gameresult='THE GAME WAS TIE';
+
+  }
+  else{
+    gameresult='COMPUTER WON THE GAME';
+  }
+  document.querySelector('#result').innerText=`USER CHOICE IS ${userchoise}\n COMPUTER CHOICE IS ${computerchoice} \n RESULT :${gameresult}`
+  "
+    >
+      <img id="equipment" src="ball.jpg" alt="">
+    </button>
+    <button
+      onclick="
+   userchoise = 'STUMPS';
+   randomnumber = Math.random()*3;
+if( randomnumber<=1 ){
+  computerchoice='BAT';
+}
+else if( randomnumber<=2){
+  computerchoice='BALL';
+}
+else{
+  computerchoice='STUMP';
+}
+
+if(computerchoice == 'BAT'){
+  gameresult=' COMPUTER WON THE GAME';
+
+}
+else if(computerchoice == 'BALL'){
+  gameresult='USER WON THE GAME';
+
+}
+else{
+  gameresult='THE GAME WAS TIE';
+}
+document.querySelector('#result').innerText=`USER CHOICE IS ${userchoise}\n COMPUTER CHOICE IS ${computerchoice} \n RESULT : ${gameresult}`
+"
+    >
+      <img id="equipment" src="stumps.jpg" alt="">
+    </button>
+    <h2 id="result"></h2>
+    <script>
+      document.querySelector("#result").innerText = "START THE GAME";
+    </script>
+  </body>
+</html>
